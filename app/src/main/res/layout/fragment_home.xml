@@ -15,61 +15,47 @@
         android:layout_centerHorizontal="true"
         android:textSize="50sp"/>
 
-
-    <RelativeLayout
-        android:id="@+id/sign_google"
-        android:layout_width="350dp"
+    <TextView
+        android:id="@+id/tv_signGoogle"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:elevation="10dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="280dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="300dp"
         android:background="@drawable/arounded_corner"
-        android:backgroundTint="@color/white">
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:text="Sign in with Google"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:text="Sign in with Google"
-            android:textColor="@color/black"
-            android:textSize="20dp"/>
-
-        <ImageView
-            android:paddingStart="10dp"
-            android:id="@+id/google_logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/googlelogo"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/sign_face"
-        android:layout_width="350dp"
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_marginTop="300dp"
         android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:elevation="10dp"
-        android:layout_alignTop="@+id/sign_google"
-        android:layout_marginTop="60dp"
+        android:paddingStart="10dp"
+        android:layout_alignStart="@id/tv_signGoogle"
+        android:src="@drawable/googlelogo" />
+
+    <TextView
+        android:id="@+id/tv_signFace"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="360dp"
         android:background="@drawable/arounded_corner"
-        android:backgroundTint="@color/white">
+        android:backgroundTint="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:text="Sign in with Facebook"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:text="Sign in with Facebook"
-            android:textColor="@color/black"
-            android:textSize="20dp"/>
-
-        <ImageView
-            android:paddingStart="10dp"
-            android:id="@+id/face_logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/faceelogo"/>
-    </RelativeLayout>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_marginTop="360dp"
+        android:layout_height="50dp"
+        android:paddingStart="10dp"
+        android:layout_alignStart="@id/tv_signGoogle"
+        android:src="@drawable/faceelogo" />
 
     <TextView
         android:id="@+id/text_or"
@@ -79,28 +65,20 @@
         android:textSize="20dp"
         android:textColor="@color/black"
         android:layout_centerHorizontal="true"
-        android:layout_alignTop="@+id/sign_face"
-        android:layout_marginTop="55dp"/>
+        android:layout_marginTop="420dp"/>
 
-    <RelativeLayout
-        android:id="@+id/sign_email"
-        android:layout_width="350dp"
+    <TextView
+        android:id="@+id/tv_signEmail"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:elevation="10dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignTop="@+id/text_or"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="460dp"
         android:background="@drawable/arounded_corner"
-        android:backgroundTint="@color/email">
+        android:backgroundTint="@color/email"
+        android:layout_marginHorizontal="20dp"
+        android:text="Sign in with Email"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:text="Sign in with Email"
-            android:textColor="@color/black"
-            android:textSize="20dp"/>
-    </RelativeLayout>
 
 </RelativeLayout>
