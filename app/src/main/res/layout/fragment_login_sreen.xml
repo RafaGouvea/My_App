@@ -63,7 +63,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/tv_signGoogle"
+            android:id="@+id/tv_signAccount"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:text="Sign In"

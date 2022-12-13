@@ -18,5 +18,14 @@
         android:id="@+id/loginSreen"
         android:name="com.example.myapp.LoginFragment"
         android:label="fragment_login_sreen"
-        tools:layout="@layout/fragment_login_sreen" />
+        tools:layout="@layout/fragment_login_sreen" >
+        <action
+            android:id="@+id/action_loginSreen_to_recycleView"
+            app:destination="@id/recycleView" />
+    </fragment>
+    <fragment
+        android:id="@+id/recycleView"
+        android:name="com.example.myapp.RecycleView"
+        android:label="fragment_recycle_view"
+        tools:layout="@layout/fragment_recycle_view" />
 </navigation>
