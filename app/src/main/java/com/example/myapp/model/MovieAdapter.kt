@@ -7,14 +7,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.myapp.R
+import com.example.myapp.moviemodel.MovieModel
 import kotlinx.android.synthetic.main.res_item_person.view.*
 
-class PersonalAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MovieAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items: List<PersonalData> = ArrayList()
+    private var items: List<MovieModel> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
-        return PersonalViewHolder(
+        return MovieViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.res_item_person, parent, false)
         )
 
@@ -23,7 +24,7 @@ class PersonalAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
         when (holder){
-            is PersonalViewHolder ->{
+            is MovieViewHolder ->{
                 holder.bind(items[position])
             }
         }
@@ -33,28 +34,28 @@ class PersonalAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return items.size
     }
 
-    fun setDataSet(people: List<PersonalData>){
+    fun setDataSet(movie: List<MovieModel>){
 
-        this.items = people
+        this.items = movie
 
     }
 
-    class PersonalViewHolder constructor(
+    class MovieViewHolder constructor(
         itemView: View
     ): RecyclerView.ViewHolder(itemView){
 
-        private val personalName = itemView.input_name
-        private val personalPhone = itemView.input_phone
-        private val personalCPF = itemView.input_CPF
-        private val personalEmail = itemView.input_email
-        private val personalImageUrl = itemView.profile_person
+        private val movieTitle = itemView.input_title
+        private val movieTime = itemView.input_time
+        private val movieGenre = itemView.input_genre
+        private val movieDescription = itemView.input_description
+        private val movieProfile = itemView.profile
 
-        fun bind(personalData: PersonalData){
+        fun bind(movieModel: MovieModel){
 
-            personalName.text = personalData.name
-            personalPhone.text = personalData.phone
-            personalCPF.text = personalData.cpf
-            personalEmail.text = personalData.email
+            movieTitle.text = movieModel.title
+            movieTime.text = movieModel.releaseDate
+            //movieGenre.text = movieModel.genreNameList
+            movieDescription.text = movieModel.overview
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
@@ -62,8 +63,8 @@ class PersonalAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(personalData.imageUrl)
-                .into(personalImageUrl)
+                .load(movieModel.posterPath)
+                .into(movieProfile)
 
         }
 

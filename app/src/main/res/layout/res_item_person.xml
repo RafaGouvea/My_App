@@ -27,7 +27,7 @@
                 android:layout_marginBottom="20dp">
 
                 <ImageView
-                    android:id="@+id/profile_person"
+                    android:id="@+id/profile"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:adjustViewBounds="true"
@@ -38,108 +38,108 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/tittle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Name: "
+                    android:text="Title:"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="@+id/left_barrier"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/input_name" />
+                    app:layout_constraintTop_toTopOf="@+id/input_title" />
 
                 <TextView
-                    android:id="@+id/input_name"
+                    android:id="@+id/input_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="input_name"
+                    android:text="input_title"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/input_phone"
+                    app:layout_constraintBottom_toTopOf="@+id/input_time"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/left_barrier"
-                    app:layout_constraintTop_toBottomOf="@+id/profile_person"
+                    app:layout_constraintTop_toBottomOf="@+id/profile"
                     app:layout_constraintVertical_chainStyle="packed" />
 
                 <TextView
                     android:id="@+id/timeMovie"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Phone: "
+                    android:text="Time: "
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="@+id/left_barrier"
-                    app:layout_constraintStart_toStartOf="@+id/name"
-                    app:layout_constraintTop_toTopOf="@+id/input_phone" />
+                    app:layout_constraintStart_toStartOf="@+id/tittle"
+                    app:layout_constraintTop_toTopOf="@+id/input_time" />
 
                 <TextView
-                    android:id="@+id/input_phone"
+                    android:id="@+id/input_time"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:text="input_phone"
+                    android:text="input_time"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/input_CPF"
-                    app:layout_constraintEnd_toEndOf="@+id/input_name"
+                    app:layout_constraintBottom_toTopOf="@+id/input_genre"
+                    app:layout_constraintEnd_toEndOf="@+id/input_title"
                     app:layout_constraintStart_toEndOf="@+id/left_barrier"
-                    app:layout_constraintTop_toBottomOf="@+id/input_name" />
+                    app:layout_constraintTop_toBottomOf="@+id/input_title" />
 
                 <TextView
                     android:id="@+id/genre"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="CPF: "
+                    android:text="Genre: "
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="@+id/left_barrier"
                     app:layout_constraintStart_toStartOf="@+id/timeMovie"
-                    app:layout_constraintTop_toTopOf="@+id/input_CPF" />
+                    app:layout_constraintTop_toTopOf="@+id/input_genre" />
 
                 <TextView
-                    android:id="@+id/input_CPF"
+                    android:id="@+id/input_genre"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:text="input_CPF"
+                    android:text="input_genre"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/input_email"
-                    app:layout_constraintEnd_toEndOf="@+id/input_phone"
+                    app:layout_constraintBottom_toTopOf="@+id/input_description"
+                    app:layout_constraintEnd_toEndOf="@+id/input_time"
                     app:layout_constraintStart_toEndOf="@+id/left_barrier"
-                    app:layout_constraintTop_toBottomOf="@+id/input_phone" />
+                    app:layout_constraintTop_toBottomOf="@+id/input_time" />
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Email: "
+                    android:text="Description: "
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="@+id/genre"
-                    app:layout_constraintTop_toTopOf="@+id/input_email" />
+                    app:layout_constraintTop_toTopOf="@+id/input_description" />
 
 
                 <TextView
-                    android:id="@+id/input_email"
+                    android:id="@+id/input_description"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="8dp"
-                    android:text="input_email"
+                    android:text="input_description"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/input_CPF"
+                    app:layout_constraintEnd_toEndOf="@+id/input_genre"
                     app:layout_constraintStart_toEndOf="@+id/left_barrier"
-                    app:layout_constraintTop_toBottomOf="@+id/input_CPF" />
+                    app:layout_constraintTop_toBottomOf="@+id/input_genre" />
 
                 <androidx.constraintlayout.widget.Barrier
                     android:id="@+id/left_barrier"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     app:barrierDirection="end"
-                    app:constraint_referenced_ids="name,genre,description,timeMovie"
-                    app:layout_constraintTop_toBottomOf="@+id/profile_person"
+                    app:constraint_referenced_ids="tittle,genre,description,timeMovie"
+                    app:layout_constraintTop_toBottomOf="@+id/profile"
                     tools:layout_editor_absoluteX="87dp"
                     tools:layout_editor_absoluteY="256dp" />
 

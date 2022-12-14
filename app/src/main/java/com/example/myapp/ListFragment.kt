@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapp.model.DataSource
-import com.example.myapp.model.PersonalAdapter
+import com.example.myapp.model.MovieAdapter
 
 class ListFragment : Fragment() {
 
-    private lateinit var personalAdapter: PersonalAdapter
+    private lateinit var movieAdapter: MovieAdapter
     private lateinit var recyclerview: RecyclerView
 
     override fun onCreateView(
@@ -30,13 +30,13 @@ class ListFragment : Fragment() {
 
     private fun addDataSource() {
         val dataSource = DataSource.createDataSet()
-        this.personalAdapter.setDataSet(dataSource)
+        this.movieAdapter.setDataSet(dataSource)
     }
 
     private fun initRecycleView(view: View) {
-        this.personalAdapter = PersonalAdapter()
+        this.movieAdapter = MovieAdapter()
         recyclerview = view.findViewById(R.id.fragment_recycle_view)
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
-        recyclerview.adapter = this.personalAdapter
+        recyclerview.adapter = this.movieAdapter
     }
 }
