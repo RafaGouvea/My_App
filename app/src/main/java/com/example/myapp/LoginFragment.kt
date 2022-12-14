@@ -21,6 +21,8 @@ class LoginFragment : Fragment() {
         buttonGoogle.setOnClickListener{
             findNavController().navigate(R.id.action_loginSreen_to_recycleView)
         }
+
         return view
+
     }
 }

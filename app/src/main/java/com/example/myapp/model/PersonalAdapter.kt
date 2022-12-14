@@ -1,9 +1,12 @@
-package com.example.myapp
+package com.example.myapp.model
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.example.myapp.R
 import kotlinx.android.synthetic.main.res_item_person.view.*
 
 class PersonalAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -24,11 +27,16 @@ class PersonalAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 holder.bind(items[position])
             }
         }
-
     }
 
     override fun getItemCount(): Int {
         return items.size
+    }
+
+    fun setDataSet(people: List<PersonalData>){
+
+        this.items = people
+
     }
 
     class PersonalViewHolder constructor(
@@ -47,6 +55,15 @@ class PersonalAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             personalPhone.text = personalData.phone
             personalCPF.text = personalData.cpf
             personalEmail.text = personalData.email
+
+            val requestOptions = RequestOptions()
+                .placeholder(R.drawable.ic_launcher_background)
+                .error(R.drawable.ic_launcher_background)
+
+            Glide.with(itemView.context)
+                .applyDefaultRequestOptions(requestOptions)
+                .load(personalData.imageUrl)
+                .into(personalImageUrl)
 
         }
 

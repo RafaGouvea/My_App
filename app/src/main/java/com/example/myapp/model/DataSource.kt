@@ -1,4 +1,6 @@
-package com.example.myapp
+package com.example.myapp.model
+
+import com.example.myapp.model.PersonalData
 
 class DataSource {
     companion object {
