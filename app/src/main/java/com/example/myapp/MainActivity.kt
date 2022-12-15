@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.example.myapp.model.MovieAdapter
+import com.example.myapp.moviemodel.MovieAdapter
 
 class MainActivity : AppCompatActivity() {
 

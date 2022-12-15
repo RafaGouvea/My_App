@@ -5,6 +5,6 @@ data class MovieModel(
     val posterPath: String,
     val overview: String,
     val title: String,
-    val genreNameList: List<String>,
+    //val genreNameList: List<String>,
     val releaseDate: String
 )

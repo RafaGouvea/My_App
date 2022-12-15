@@ -11,17 +11,16 @@ data class MovieResponse(
     @SerializedName("poster_path") val posterPath: String,
     val overview: String,
     val title: String,
-    @SerializedName("genre_ids") val genreIdList: List<String>,
+    //@SerializedName("genre_ids") val genreIdList: List<String>,
     @SerializedName("release_date") val releaseDate: String
 )
 
-fun MovieResponse.toModel(genreList: List<GenreModel>): MovieModel {
+fun MovieResponse.toModel(): MovieModel {
     return MovieModel(
         id = id,
-        posterPath = "https://image.tmdb.org/t/p/w500/${posterPath}",
+        posterPath = posterPath,
         overview = overview,
         title = title,
-        genreNameList = genreIdList,
         releaseDate = releaseDate
     )
 }

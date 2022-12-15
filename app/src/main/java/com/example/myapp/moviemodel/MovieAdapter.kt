@@ -1,4 +1,4 @@
-package com.example.myapp.model
+package com.example.myapp.moviemodel
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.myapp.R
-import com.example.myapp.moviemodel.MovieModel
 import kotlinx.android.synthetic.main.res_item_person.view.*
 
 class MovieAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -35,9 +34,7 @@ class MovieAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     fun setDataSet(movie: List<MovieModel>){
-
         this.items = movie
-
     }
 
     class MovieViewHolder constructor(
@@ -46,7 +43,7 @@ class MovieAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
         private val movieTitle = itemView.input_title
         private val movieTime = itemView.input_time
-        private val movieGenre = itemView.input_genre
+        //private val movieGenre = itemView.input_genre
         private val movieDescription = itemView.input_description
         private val movieProfile = itemView.profile
 
